@@ -503,6 +503,34 @@ button {
 
   color: var(--color-text);
 }
+.card-cover-text {
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--up-white-text);
+}
+.card-thumb {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+
+  transform: translateY(100%);
+  transition: transform 2500ms ease;
+
+  opacity: 0;
+
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0%);
+}
 /* ----------------------------Підвал -----------------------------*/
 .footer {
   background-color: var(--background-footer);
