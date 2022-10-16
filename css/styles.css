@@ -26,6 +26,7 @@
   --activ-button: #188ce8;
   --card-set-gap: 30px;
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --time: 2500ms;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -119,6 +120,10 @@ button {
 
   color: var(--activ);
 }
+.nav .logo {
+  border-bottom: none;
+  transition: border-bottom var(--time) var(--time-function);
+}
 .nav .logo:hover {
   border-bottom: 1px groove var(--activ);
 }
@@ -139,6 +144,8 @@ button {
   letter-spacing: 0.02em;
 
   color: var(--color-title);
+
+  transition: color var(--time) var(--time-function);
 }
 .item.activ {
   color: var(--activ);
@@ -166,6 +173,8 @@ button {
   letter-spacing: 0.02em;
 
   color: var(--color-text);
+
+  transition: color var(--time) var(--time-function);
 }
 .box .item:hover,
 .box .item:focus,
@@ -230,6 +239,8 @@ button {
   color: var(--up-white-text);
   background-color: var(--activ);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--time) var(--time-function);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -387,6 +398,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: background-color var(--time) var(--time-function), color var(--time) var(--time-function);
 }
 .sosial-icon {
   fill: currentColor;
@@ -427,6 +440,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: background-color var(--time) var(--time-function), color var(--time) var(--time-function);
 }
 .client-icon {
   fill: currentColor;
@@ -458,6 +473,9 @@ button {
 
   color: var(--color-title);
   background-color: var(--second-background);
+  box-shadow: none;
+
+  transition: background-color var(--time) var(--time-function), color var(--time) var(--time-function), box-shadow var(--time) var(--time-function);
 }
 .project-button:hover,
 .project-button:focus {
@@ -478,6 +496,9 @@ button {
   margin-top: var(--card-set-gap);
 
   width: 370px;
+
+  box-shadow: none;
+  transition: box-shadow var(--time) var(--time-function);
 }
 .card-all {
   display: block;
@@ -526,7 +547,7 @@ button {
   bottom: 0;
 
   transform: translateY(100%);
-  transition: transform 250ms var(--time-function);
+  transition: transform var(--time) var(--time-function);
 
   /* opacity: 0; */
 
@@ -553,6 +574,8 @@ button {
 }
 .footer .logo {
   color: var(--up-white-text);
+  border-bottom: none;
+  transition: border-bottom var(--time) var(--time-function);
 }
 .footer .web {
   color: var(--activ);
@@ -573,6 +596,8 @@ button {
   letter-spacing: 0.03em;
 
   color: var(--up-white-text);
+
+  transition: color var(--time) var(--time-function);
 }
 .footer .contact {
   font-style: normal;
@@ -581,6 +606,8 @@ button {
   letter-spacing: 0.03em;
 
   color: var(--contact-footer);
+
+  transition: color var(--time) var(--time-function);
 }
 .address:hover,
 .address:focus,
@@ -611,6 +638,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: background-color var(--time) var(--time-function);
 }
 .footer-sosial-icon {
   width: 20px;
@@ -636,12 +665,18 @@ button {
   left: 0;
 
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--time) var(--time-function);
+}
+.backdrop.is-hidden .model {
+  transform: translate(-50%, -50%) scale(0);
 }
 .model {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
+  transform: translate(-50%, -50%) scale(1) rotateZ(1turn);
+  transition: transform var(--time) var(--time-function);
 
   height: 528px;
   width: 581px;
@@ -650,6 +685,7 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .icon-close-button {
   position: absolute;
   top: 8px;
@@ -672,6 +708,8 @@ button {
   width: 11px;
   height: 11px;
   fill: currentColor;
+
+  transition: color var(--time) var(--time-function);
 }
 .icon-close-button:hover,
 .icon-close-button:focus {
