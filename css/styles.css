@@ -79,8 +79,9 @@ button {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+
+  border: 0;
 
   white-space: nowrap;
   clip-path: inset(100%);
@@ -265,10 +266,12 @@ button {
 .bloc-icon-pluses {
   margin-bottom: var(--card-set-gap);
   height: 120px;
-  background-color: var(--second-background);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: var(--second-background);
 }
 .icon-pluses {
   width: 70px;
@@ -618,8 +621,10 @@ button {
   outline: none;
 }
 /* ----------------Модалка1-------------- */
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
+  visibility: visible;
+  pointer-events: none;
 }
 .backdrop {
   position: fixed;
@@ -642,4 +647,31 @@ button {
   background-color: var(--up-white-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+.icon-close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  color: #000000;
+  background-color: var(--up-white-background);
+}
+.icon-close {
+  width: 11px;
+  height: 11px;
+  fill: currentColor;
+}
+.icon-close-button:hover,
+.icon-close-button:focus {
+  color: var(--activ);
 }
