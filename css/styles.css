@@ -330,11 +330,9 @@ button {
   align-items: center;
   justify-content: center;
   height: 70px;
-  width: 100%;
 
   font-weight: 700;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: var(--up-white-text);
@@ -452,7 +450,7 @@ button {
   align-items: center;
   justify-content: center;
 
-  transition: background-color var(--time) var(--time-function), color var(--time) var(--time-function);
+  transition: border-color var(--time) var(--time-function), color var(--time) var(--time-function);
 }
 .client-icon {
   fill: currentColor;
@@ -507,12 +505,12 @@ button {
   margin-top: var(--card-set-gap);
 
   width: 370px;
-
-  box-shadow: none;
-  transition: box-shadow var(--time) var(--time-function);
 }
 .card-all {
   display: block;
+
+  box-shadow: none;
+  transition: box-shadow var(--time) var(--time-function);
 }
 .card-all:hover,
 .card-all:focus {
@@ -564,7 +562,8 @@ button {
 
   background-color: rgba(33, 150, 243, 0.9);
 }
-.card:hover .overlay {
+.card-all:hover .overlay,
+.card-all:focus .overlay {
   /* opacity: 1; */
   transform: translateY(0%);
 }
